@@ -1,6 +1,6 @@
 
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import ProductItem from './components/ProductItem';
+import ProductItem from './components/ProductItem/ProductItem';
 import { addToCart } from './products.slice';
 
 export default function Products() {

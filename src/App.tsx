@@ -1,12 +1,12 @@
-import logo from './logo.svg'
-import './App.css'
-import PageHeader from './components/PageHeader';
+import './_global.css';
+import PageLayout from './components/PageLayout';
 import Products from './features/products';
 function App() {
   return (
-    <div className="App">
-      <PageHeader />
-      <Products />
+    <div className="App-container">
+      <PageLayout>
+        <Products />
+      </PageLayout>
     </div>
   )
 }

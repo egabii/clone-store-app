@@ -1,9 +1,4 @@
-
-
-interface ProductItemProps {
-  name: string;
-  addToCart(name: string): void;
-}
+import { ProductItemProps } from "./ProductItemProps";
 
 export default function ProductItem({name, addToCart}: ProductItemProps) {
   return (

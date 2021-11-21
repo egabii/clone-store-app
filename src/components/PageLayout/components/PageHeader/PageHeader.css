@@ -1,6 +1,6 @@
 .App-logo {
   pointer-events: none;
-  width: 120px;
+  width: 5rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,11 +12,11 @@
 .App-header {
   background-color: #282c34;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 14px;
   color: white;
+  padding: 15px;
 }
 
 .App-link {
@@ -30,4 +30,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-header-logo, .App-header-toolbar {
+  display: flex;
+  align-items: center;
 }
