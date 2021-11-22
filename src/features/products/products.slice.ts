@@ -2,11 +2,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IProduct } from './products.interface';
 import { products as data } from './mocks.product';
 
-interface IProducts {
+export interface IProducts {
   data: Array<IProduct>
 }
 
-const initialState: IProducts = {
+export const initialState: IProducts = {
   data
 };
 
@@ -20,13 +20,12 @@ const productsSlide = createSlice({
         product.name === action.payload ? product.quantity++ : null;
       })
     },
-    addToFav(state, action: PayloadAction<IProduct>) {
-      state.data.forEach((product:IProduct) => {
-        product.favourite = product.name === action.payload.name; 
-      })
+    setFavourite(state, action: PayloadAction<string>) {
+      const selectedProduct = state.data.find(product => product.name === action.payload);
+      selectedProduct.favourite = !selectedProduct?.favourite;
     }
   }
 });
 
-export const { addToCart, addToFav } = productsSlide.actions;
+export const { addToCart, setFavourite } = productsSlide.actions;
 export default productsSlide.reducer;
